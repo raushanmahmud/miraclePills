@@ -10,6 +10,26 @@ import UIKit
 
 class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate {
 
+    
+    
+    @IBOutlet weak var pillImg: UIImageView!
+    
+    @IBOutlet weak var pillLabel: UILabel!
+    @IBOutlet weak var priceLabel: UILabel!
+    
+    @IBOutlet weak var dividerBar: UIView!
+    
+    @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var nameTxtField: UITextField!
+    
+    @IBOutlet weak var streetLabel: UILabel!
+    @IBOutlet weak var streetTxtField: UITextField!
+    
+    @IBOutlet weak var cityLabel: UILabel!
+    @IBOutlet weak var cityTxtField: UITextField!
+    
+    @IBOutlet weak var stateLabel: UILabel!
+    
     @IBOutlet weak var statePicker: UIPickerView!
     
     @IBOutlet weak var statePickerBtn: UIButton!
@@ -18,6 +38,11 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
     @IBOutlet weak var zipCodeLabel: UILabel!
     @IBOutlet weak var countryTextField: UITextField!
     @IBOutlet weak var countryLabel: UILabel!
+    
+    
+    @IBOutlet weak var buyNowBtn: UIButton!
+    
+    @IBOutlet weak var successImg: UIImageView!
     
     let states = ["Alaska", "Arkansas", "Alabama", "California", "Maine", "New York"]
     
@@ -30,6 +55,7 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+        
     }
 
     @IBAction func stateBtnPressed(_ sender: Any) {
@@ -41,7 +67,42 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
         
         statePicker.isHidden = false
     }
-
+    
+    @IBAction func buyNowBtnPressed(_ sender: Any) {
+        
+        pillImg.isHidden = true
+        
+        pillLabel.isHidden = true
+        priceLabel.isHidden =  true
+        
+        dividerBar.isHidden = true
+        
+        nameLabel.isHidden = true
+        nameTxtField.isHidden = true
+        
+        streetLabel.isHidden = true
+        streetTxtField.isHidden = true
+        
+        cityLabel.isHidden = true
+        cityTxtField.isHidden = true
+        
+        stateLabel.isHidden = true
+        
+        statePicker.isHidden = true
+        
+        statePickerBtn.isHidden = true
+        
+        zipCodeTextField.isHidden = true
+        zipCodeLabel.isHidden = true
+        
+        countryTextField.isHidden = true
+        countryLabel.isHidden = true
+        
+        
+        buyNowBtn.isHidden = true
+        
+        successImg.isHidden = false
+    }
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return 1
     }
